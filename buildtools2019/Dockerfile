@@ -77,6 +77,7 @@ RUN `
             "--add","Microsoft.VisualStudio.Workload.ManagedDesktopBuildTools", `
             "--add","Microsoft.VisualStudio.Workload.DataBuildTools", `
             "--add","Microsoft.VisualStudio.Workload.NetCoreBuildTools", `
+            "--add","Microsoft.VisualStudio.Workload.VCTools", `
             "--add","Microsoft.Component.ClickOnce.MSBuild", `
             "--add","Microsoft.VisualStudio.Workload.WebBuildTools", `
             "--add","Microsoft.VisualStudio.Component.Roslyn.Compiler", `
@@ -86,32 +87,31 @@ RUN `
             "--add","Microsoft.VisualStudio.Component.Windows10SDK", `
             "--add","Microsoft.VisualStudio.Component.Windows10SDK.18362", `
             "--add","Microsoft.VisualStudio.Component.Windows10SDK.17763", `
-            "--add","Microsoft.VisualStudio.Workload.VCTools", `
             #"--add","Microsoft.VisualStudio.Component.VC.CoreBuildTools", `
-            "--add","Microsoft.VisualStudio.Component.VC.Tools.x86.x64",  `
-            "--add","Microsoft.VisualStudio.Component.VC.Redist.14.Latest", `
-            "--add","Microsoft.VisualStudio.Component.VC.CMake.Project", ` 
+            # "--add","Microsoft.VisualStudio.Component.VC.Tools.x86.x64",  `
+            # "--add","Microsoft.VisualStudio.Component.VC.Redist.14.Latest", `
+            # "--add","Microsoft.VisualStudio.Component.VC.CMake.Project", ` 
             "--add","Microsoft.VisualStudio.Component.VC.ATL", `
             "--add","Microsoft.VisualStudio.Component.VC.ATLMFC", `
-            "--add","Microsoft.VisualStudio.Component.VC.14.27.MFC", `
-            "--add","Microsoft.VisualStudio.Component.VC.14.27.ATL", `
-            "--add","Microsoft.VisualStudio.Component.VC.14.25.MFC", `
-            "--add","Microsoft.VisualStudio.Component.VC.14.25.ATL", `
-            "--add","Microsoft.VisualStudio.Component.VC.14.24.MFC", `
-            "--add","Microsoft.VisualStudio.Component.VC.14.24.ATL", `
-            "--add","Microsoft.VisualStudio.Component.VC.14.23.MFC", `
-            "--add","Microsoft.VisualStudio.Component.VC.14.23.ATL", `
-            "--add","Microsoft.VisualStudio.Component.VC.14.22.MFC", `
-            "--add","Microsoft.VisualStudio.Component.VC.14.22.ATL", `
-            "--add","Microsoft.VisualStudio.Component.VC.14.21.MFC", `
-            "--add","Microsoft.VisualStudio.Component.VC.14.21.ATL", `
-            "--add","Microsoft.VisualStudio.Component.VC.14.20.MFC", `
-            "--add","Microsoft.VisualStudio.Component.VC.14.20.ATL", `
+            # "--add","Microsoft.VisualStudio.Component.VC.14.27.MFC", `
+            # "--add","Microsoft.VisualStudio.Component.VC.14.27.ATL", `
+            # "--add","Microsoft.VisualStudio.Component.VC.14.25.MFC", `
+            # "--add","Microsoft.VisualStudio.Component.VC.14.25.ATL", `
+            # "--add","Microsoft.VisualStudio.Component.VC.14.24.MFC", `
+            # "--add","Microsoft.VisualStudio.Component.VC.14.24.ATL", `
+            # "--add","Microsoft.VisualStudio.Component.VC.14.23.MFC", `
+            # "--add","Microsoft.VisualStudio.Component.VC.14.23.ATL", `
+            # "--add","Microsoft.VisualStudio.Component.VC.14.22.MFC", `
+            # "--add","Microsoft.VisualStudio.Component.VC.14.22.ATL", `
+            # "--add","Microsoft.VisualStudio.Component.VC.14.21.MFC", `
+            # "--add","Microsoft.VisualStudio.Component.VC.14.21.ATL", `
+            # "--add","Microsoft.VisualStudio.Component.VC.14.20.MFC", `
+            # "--add","Microsoft.VisualStudio.Component.VC.14.20.ATL", `
             "--add","Microsoft.VisualStudio.Component.VC.CLI.Support", `
             "--add","Microsoft.VisualStudio.Component.VC.Modules.x86.x64", `
             "--add","Microsoft.VisualStudio.Component.VC.v141.x86.x64", `
             #"--add","Microsoft.Component.VC.Runtime.UCRTSDK", `
-            #"--add","Microsoft.VisualStudio.Component.VC.140", `
+            "--add","Microsoft.VisualStudio.Component.VC.140", `
             "--add","Microsoft.VisualStudio.Component.VC.v141.ATL", `
             "--add","Microsoft.VisualStudio.Component.VC.v141.MFC", `
             "--add","Microsoft.VisualStudio.Component.TestTools.BuildTools", `
