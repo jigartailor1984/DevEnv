@@ -90,28 +90,28 @@ RUN `
             #"--add","Microsoft.VisualStudio.Component.VC.CoreBuildTools", `
             "--add","Microsoft.VisualStudio.Component.VC.Tools.x86.x64",  `
             "--add","Microsoft.VisualStudio.Component.VC.Redist.14.Latest", `
-            "--add","Microsoft.VisualStudio.Component.VC.CMake.Project", ` 
+            # "--add","Microsoft.VisualStudio.Component.VC.CMake.Project", ` 
             "--add","Microsoft.VisualStudio.Component.VC.ATL", `
             "--add","Microsoft.VisualStudio.Component.VC.ATLMFC", `
-            "--add","Microsoft.VisualStudio.Component.VC.14.27.MFC", `
-            "--add","Microsoft.VisualStudio.Component.VC.14.27.ATL", `
-            "--add","Microsoft.VisualStudio.Component.VC.14.25.MFC", `
-            "--add","Microsoft.VisualStudio.Component.VC.14.25.ATL", `
-            "--add","Microsoft.VisualStudio.Component.VC.14.24.MFC", `
-            "--add","Microsoft.VisualStudio.Component.VC.14.24.ATL", `
-            "--add","Microsoft.VisualStudio.Component.VC.14.23.MFC", `
-            "--add","Microsoft.VisualStudio.Component.VC.14.23.ATL", `
-            "--add","Microsoft.VisualStudio.Component.VC.14.22.MFC", `
-            "--add","Microsoft.VisualStudio.Component.VC.14.22.ATL", `
-            "--add","Microsoft.VisualStudio.Component.VC.14.21.MFC", `
-            "--add","Microsoft.VisualStudio.Component.VC.14.21.ATL", `
-            "--add","Microsoft.VisualStudio.Component.VC.14.20.MFC", `
-            "--add","Microsoft.VisualStudio.Component.VC.14.20.ATL", `
+            # "--add","Microsoft.VisualStudio.Component.VC.14.27.MFC", `
+            # "--add","Microsoft.VisualStudio.Component.VC.14.27.ATL", `
+            # "--add","Microsoft.VisualStudio.Component.VC.14.25.MFC", `
+            # "--add","Microsoft.VisualStudio.Component.VC.14.25.ATL", `
+            # "--add","Microsoft.VisualStudio.Component.VC.14.24.MFC", `
+            # "--add","Microsoft.VisualStudio.Component.VC.14.24.ATL", `
+            # "--add","Microsoft.VisualStudio.Component.VC.14.23.MFC", `
+            # "--add","Microsoft.VisualStudio.Component.VC.14.23.ATL", `
+            # "--add","Microsoft.VisualStudio.Component.VC.14.22.MFC", `
+            # "--add","Microsoft.VisualStudio.Component.VC.14.22.ATL", `
+            # "--add","Microsoft.VisualStudio.Component.VC.14.21.MFC", `
+            # "--add","Microsoft.VisualStudio.Component.VC.14.21.ATL", `
+            # "--add","Microsoft.VisualStudio.Component.VC.14.20.MFC", `
+            # "--add","Microsoft.VisualStudio.Component.VC.14.20.ATL", `
             "--add","Microsoft.VisualStudio.Component.VC.CLI.Support", `
             "--add","Microsoft.VisualStudio.Component.VC.Modules.x86.x64", `
             "--add","Microsoft.VisualStudio.Component.VC.v141.x86.x64", `
             #"--add","Microsoft.Component.VC.Runtime.UCRTSDK", `
-            #"--add","Microsoft.VisualStudio.Component.VC.140", `
+            "--add","Microsoft.VisualStudio.Component.VC.140", `
             "--add","Microsoft.VisualStudio.Component.VC.v141.ATL", `
             "--add","Microsoft.VisualStudio.Component.VC.v141.MFC", `
             "--add","Microsoft.VisualStudio.Component.TestTools.BuildTools", `
@@ -165,7 +165,7 @@ FROM buildtools as buildtoolsfinal
 SHELL ["cmd", "/S", "/C"]
 
 # Set PATH in one layer to keep image size down.
-RUN setx /M PATH "%PATH%;%ProgramFiles(x86)%\Microsoft Visual Studio\2019\TestAgent\Common7\IDE;%programfiles(x86)\Microsoft Visual Studio\2019\TestAgent\Common7\IDE\CommonExtensions\Microsoft\TestWindow\;%ProgramFiles(x86)%\Microsoft Visual Studio\2019\BuildTools\MSBuild\Current\Bin\;%ProgramFiles(x86)%\Microsoft SDKs\ClickOnce\SignTool\;%ProgramFiles%\NuGet\latest" `
+RUN setx /M PATH "%PATH%;%ProgramFiles(x86)%\Microsoft Visual Studio\2019\TestAgent\Common7\IDE;%programfiles(x86)\Microsoft Visual Studio\2019\TestAgent\Common7\IDE\CommonExtensions\Microsoft\TestWindow\;%ProgramFiles(x86)%\Microsoft Visual Studio\2019\BuildTools\MSBuild\Current\Bin\;%ProgramFiles(x86)%\Microsoft SDKs\ClickOnce\SignTool\;%ProgramFiles%\NuGet\latest;%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.29.30133\bin\HostX86\x86;%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\VC\VCPackages;%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\CommonExtensions\Microsoft\TeamFoundation\Team Explorer;%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\bin\Roslyn;%ProgramFiles(x86)%\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.8 Tools\;%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Enterprise\Common7\Tools\devinit;%ProgramFiles(x86)%\Windows Kits\10\bin\10.0.19041.0\x86;%ProgramFiles(x86)%\Windows Kits\10\bin\x86;%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Enterprise\\MSBuild\Current\Bin;%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\;%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Enterprise\Common7\Tools\;%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Enterprise\VC\Tools\Llvm\bin;" `
     && setx /M DevEnvDir "%ProgramFiles(x86)%\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\"
 
 RUN `
