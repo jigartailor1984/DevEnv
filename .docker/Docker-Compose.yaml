@@ -1,0 +1,43 @@
+version: "3.7"
+services: 
+  # buildtools2019:
+  #   platform: windows/amd64
+  #   build: 
+  #     context: buildtools2019
+  #   image: buildtools:2019
+  # netfx48:
+  #   platform: windows/amd64
+  #   build: 
+  #     context: buildtools2019
+  #     target: netfx48
+  #   image: netfx:4.8
+  mstest:
+    platform: windows/amd64
+    build: 
+      context: buildtools2019
+      target: mstestfinal
+    image: mstest:2019
+  # git:
+  #   platform: windows/amd64
+  #   build: 
+  #     context: buildtools2019
+  #     target: gitfinal
+  #   image: git:2.31.1
+    # depends_on: 
+    #   - mstest
+  # buildtools2019:
+  #   platform: windows/amd64
+  #   build: 
+  #     context: buildtools2019
+  #     target: buildtools2019
+  #   image: buildtools:2019
+  #   depends_on: 
+  #     - git
+  # wix:
+  #   platform: windows/amd64
+  #   build: 
+  #     context: buildtools2019
+  #     target: wix
+  #   image: wix:311
+  #   depends_on: 
+  #     - buildtools2019
