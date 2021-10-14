@@ -77,6 +77,7 @@ RUN `
             "--add","Microsoft.VisualStudio.Workload.ManagedDesktopBuildTools", `
             "--add","Microsoft.VisualStudio.Workload.DataBuildTools", `
             "--add","Microsoft.VisualStudio.Workload.NetCoreBuildTools", `
+            "--add","Microsoft.VisualStudio.Workload.VCTools", `
             "--add","Microsoft.Component.ClickOnce.MSBuild", `
             "--add","Microsoft.VisualStudio.Workload.WebBuildTools", `
             "--add","Microsoft.VisualStudio.Component.Roslyn.Compiler", `
@@ -86,7 +87,6 @@ RUN `
             "--add","Microsoft.VisualStudio.Component.Windows10SDK", `
             "--add","Microsoft.VisualStudio.Component.Windows10SDK.18362", `
             "--add","Microsoft.VisualStudio.Component.Windows10SDK.17763", `
-            "--add","Microsoft.VisualStudio.Workload.VCTools", `
             #"--add","Microsoft.VisualStudio.Component.VC.CoreBuildTools", `
             "--add","Microsoft.VisualStudio.Component.VC.Tools.x86.x64",  `
             "--add","Microsoft.VisualStudio.Component.VC.Redist.14.Latest", `
